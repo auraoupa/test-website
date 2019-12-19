@@ -1,0 +1,102 @@
+---
+layout: default
+---
+<section id="people">
+    <div class="container" id="welcome">
+        <div class="welcome-banner">
+            <h2 class="welcome-banner-heading">Fundings</h2>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+
+            <div class="col-md-3">
+                <div class="thumbnail" id="cnes" onclick="afficheMenu(this)">
+                    <a href=# >
+                    <img class="mg-responsive img-center" alt="Centre National d'Etudes Spatiales" src="{{site.baseurl}}/assets/img/people/cnes.png" title="The French Space Agency (CNES) contributes to funding research in oceanography. Our group has established strong collaborations with CNES since the beginning of satellite altimetry in the 90'."></img></a>
+                </div>
+                <div id="souscnes" style="display:none">
+                    <div class="thumbnail">
+                        <a href="http://www.cnes.fr" > The French Space Agency (CNES) </a>  contributes to funding research in oceanography. Our group has established strong collaborations with CNES since the beginning of satellite altimetry in the 90'.
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="thumbnail" id="mercator" onclick="afficheMenu(this)">
+                    <a href=# >
+                    <img class="mg-responsive img-center" alt="Mercator Océan" src="{{site.baseurl}}/assets/img/people/mercator-ocean.png" title="Mercator Ocean is the french operational oceanography center. Our group is working closely with Mercator-Ocean."></img></a>
+                </div>
+                <div id="sousmercator" style="display:none">
+                    <div class="thumbnail">
+                        <a href="http://www.mercator-ocean.fr"> Mercator Ocean </a>  is the french operational oceanography center. Our group is working closely with Mercator-Ocean.
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="thumbnail" id="anr" onclick="afficheMenu(this)">
+                    <a href=# >
+                    <img class="mg-responsive img-center" alt="Agence Nationale de la Recherche" src="{{site.baseurl}}/assets/img/people/anr.png"></img></a>
+                </div>
+                <div id="sousanr" style="display:none">
+                    <div class="thumbnail">
+                        <a href="http://www.agence-nationale-recherche.fr"> ANR </a>  
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="thumbnail" id="h2020" onclick="afficheMenu(this)">
+                    <a href=# >
+                    <img class="mg-responsive img-center" alt="Horizon 2020" src="{{site.baseurl}}/assets/img/people/h2020.jpeg"></img></a>
+                </div>
+                <div id="soush2020" style="display:none">
+                    <div class="thumbnail">
+                        <a href="http://www.horizon2020.fr"> H2020 </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="container" id="welcome">
+        <div class="welcome-banner">
+            <h2 class="welcome-banner-heading">Ongoing projects</h2>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    {% for post in site.data.projects %}
+        <div class="panel panel-default" id="{{post.ancre}}">
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        {% if post.image %} 
+                            <img class="img-responsive img-centered" src="{{site.baseurl}}/assets/img/projects/{{post.image}}" alt="">
+                        {% endif %}
+                    </div>
+                    <div class="col-md-9">
+                        <h3 class="bio-heading"> {{post.title}} </h3>
+                        <p class="date"> {{post.date}} </p>
+                        <p> {{post.text}} </p>
+                        {% if post.link %} 
+                            <p class="date"> <a href="{{post.link}}"> Read More </a> </p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+

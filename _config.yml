@@ -1,0 +1,17 @@
+url: https://meom-group.github.io
+baseurl: 
+
+title: MEOM Research Group
+description: Research activities and news of the MEOM Group
+
+color:
+    primary: 2196F3
+    secondary: 9E9E9E
+
+sass:
+    style: compressed
+
+markdown: kramdown
+permalink: pretty
+
+exclude: ["README.md"]

@@ -19,18 +19,18 @@ layout: default
                         <div class="row">
                             <div class="col-xs-4">
                                 {% if person.script %}
-			            <a href="{{person.script}}" > <img class="img-responsive" src="{{site.baseurl}}/assets/img/{{person.image_color}}"  name="Plot of {{person.title}}"> </a>
+			            <a href="{{person.script}}" > <img class="img-responsive" src="{{site.baseurl}}/assets/img/{{person.image}}"  name="{{person.title}}"> </a>
                                     
                                 {% else %}
-                                	<img class="img-responsive" src="{{site.baseurl}}/assets/img/{{person.image_color}}"  name="Plot of {{person.title}}">
+                                	<img class="img-responsive" src="{{site.baseurl}}/assets/img/{{person.image}}"  name="{{person.title}}">
 				{% endif %}
                             </div>
 
                             <div class="col-xs-8">
-                                <h4 class="person-name">{{person.name}}</h4>
+                                <h4 class="person-name">by {{person.name}}</h4>
 
                                 <p>{{person.title}}</p>
-                                <p>{{person.email}}</p>
+                                <p>contact : {{person.email}}</p>
 
                             </div>
                         </div>
